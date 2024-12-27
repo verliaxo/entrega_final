@@ -16,9 +16,9 @@
 5. Seleccionar la carpeta del proyecto: cd entrega_final
 6. Instalar las dependencias con: pip install -r requirements.txt
 7. Realizar las migraciones: 
-a. python manage.py makemigrations usuarios
-b. python manage.py makemigrations pagina
-c. python manage.py migrate
+- python manage.py makemigrations usuarios
+- python manage.py makemigrations pagina
+- python manage.py migrate
 8. Ejecutar el servidor e ir a http://127.0.0.1:8000/ en el navegador.
 
 # Descripción de la Página
