@@ -1,0 +1,38 @@
+{% extends 'usuarios/base.html' %}
+
+{% block title %}
+LISTA DE PRODUCTOS
+{% endblock %}
+
+{% block content %}
+
+<h1>Productos</h1>
+<ul>
+{% if productos %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Condición</th>
+                <th>Dueño</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in productos %}
+            <tr>
+                <td><a href="{% url 'producto_detalle' i.id %}">{{ i.nombre }}</a></td>
+                <td>{{ i.precio }}</td>
+                <td>{{ i.condicion }}</td>
+                <td>{{ i.user.username }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+<li>No hay productos de momento.</li>
+{% endif %}
+
+</ul>
+
+{% endblock %}

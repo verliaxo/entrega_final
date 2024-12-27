@@ -1,0 +1,22 @@
+{% extends 'usuarios/base.html' %}
+
+{% block title %}
+{{ producto.nombre }}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ producto.nombre }}</h1>
+{% if producto.foto %}
+    <p><img src="{{ producto.foto.url }}" alt="Foto de {{ producto.nombre }}" class="img-thumbnail" style="width: 150px;"></p>
+{% else %}
+    <p>No hay foto disponible para este producto.</p>
+{% endif %}
+
+<p>Descripcion: {{ producto.descripcion|safe }}</p>
+<p>Fecha de Ingreso: {{ producto.fecha_ingreso }}</p>
+<p>Categoria: {{ producto.condicion }}</p>    
+<p>Publicado por: {{ producto.user.username }}</p>    
+
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'usuarios/base.html' %}
+
+{% block title %}
+ACTUALIZAR PRODUCTO
+{% endblock %}
+
+{% block content %}
+
+<h1>Actualizar Producto</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar Cambios</button>
+</form>
+
+{% endblock %}

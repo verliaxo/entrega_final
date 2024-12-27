@@ -1,0 +1,37 @@
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Archivos de base de datos
+*.sqlite3
+
+# Archivos de compilación de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de logs
+*.log
+
+# Archivos de pruebas
+.coverage
+*.cover
+
+# Archivos de migración
+*.pyc
+*.pyo
+*.pyd
+migrations/
+
+# Ignorar carpeta de medios
+media/
+
+# Archivos temporales de sistema
+.DS_Store
+Thumbs.db

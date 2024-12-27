@@ -1,0 +1,25 @@
+{% extends 'usuarios/base.html' %}
+
+{% block title %}
+MIS PRODUCTOS
+{% endblock %}
+
+{% block content %}
+
+<h1>Mis Productos</h1>
+<ul>
+    {% if productos %}
+    {% for i in productos %}
+        <li>
+            <a href="{% url 'producto_detalle' i.id %}">{{ i.nombre }}</a>
+            <a href="{% url 'actualizar_producto' request.user.username i.id %}">Modificar</a>
+            <a href="{% url 'eliminar_producto' request.user.username i.id %}" 
+                onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar</a>
+        </li>
+    {% endfor %}
+    {% else %}
+    <li>No hay productos de momento.</li>
+    {% endif %}
+</ul>
+
+{% endblock %}

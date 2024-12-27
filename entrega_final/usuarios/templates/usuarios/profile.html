@@ -1,0 +1,43 @@
+{% extends 'usuarios/base.html' %}
+
+{% block title %}
+PERFIL DE USUARIO
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Perfil de {{ usuario.username }}</h1>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Nombre de usuario:</strong> {{ usuario.username }}</li>
+        <li class="list-group-item"><strong>Nombre real:</strong> {{ usuario.first_name }}</li>
+        <li class="list-group-item"><strong>Apellido:</strong> {{ usuario.last_name }}</li>
+        <li class="list-group-item"><strong>Email:</strong> {{ usuario.email }}</li>
+    </ul>
+
+    {% if usuario.avatar and usuario.avatar.imagen %}
+        <div class="mt-4">
+            <h3>Avatar</h3>
+            <img src="{{ usuario.avatar.imagen.url }}" alt="Avatar de {{ usuario.username }}" class="img-thumbnail" style="width: 150px;">
+        </div>
+    {% else %}
+        <p>Este usuario no tiene avatar.</p>
+    {% endif %}
+
+    <div class="mt-4">
+        <a href="{% url 'acerca_de_mi' usuario.id %}" class="btn btn-primary">Ver acerca de mí</a>
+    </div>
+
+    <div class="mt-4">
+        {% if request.user.id == usuario.id %}
+            <a href="{% url 'actualizar_perfil' usuario.id %}" class="btn btn-primary">Editar Perfil</a>
+        {% endif %}
+    </div>
+    
+    <div class="mt-4">
+        {% if request.user.id == usuario.id %}
+            <a href="{% url 'editar_descripcion' usuario.id %}" class="btn btn-primary">Editar acerca de mí</a>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}

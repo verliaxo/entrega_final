@@ -1,0 +1,23 @@
+{% extends 'usuarios/base.html' %}
+
+{% block title %}
+LISTA DE USUARIOS
+{% endblock %}
+
+{% block content %}
+
+<h1>Usuarios</h1>
+<ul>
+    {% if users %}
+    {% for i in users %}
+        <li>
+            <a>{{ i.username }}</a> 
+            <a class="navbar-brand class1" href="{% url 'perfil' i.id %}">Ver Perfil</a>
+        </li>
+    {% endfor %}
+    {% else %}
+    <li>No hay usuarios registrados.</li>
+    {% endif %}
+</ul>
+
+{% endblock %}
