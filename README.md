@@ -4,7 +4,8 @@
 
 - Nicole Ferreyra - creación de la app usuarios, sus modelos, formularios y plantillas
 - Luca Muriel - creación de la app pagina (la que maneja productos), sus modelos, formularios y plantillas.
-A través del uso de la aplicación 'Parsec', entre los dos integramos las aplicaciones para que cada usuario pueda manejar sus propios productos.
+
+- A través del uso de la aplicación 'Parsec', entre los dos integramos las aplicaciones para que cada usuario pueda manejar sus propios productos.
 
 # Instalación
 
