@@ -23,6 +23,8 @@
 
 # Descripción de la Página
 
+- Las fechas se ingresan en formato MM/DD/AA!!
+
 - En esta página, una vez registrado y logeado, un usuario tiene acceso a una pestaña que le permite ingresar productos los cuales seran publicados en un listado que puede acceder cualquier persona, ya sea que este logeado o no.
 - Estos productos pueden ser modificados unicamente por el dueño o por un administrador a través del panel de admin.
 - Cada usuario puede acceder a su perfil el cual puede modificar a su gusto, agregando una foto de perfil o una descripción, y también puede visualizar los perfiles de otros usuarios a través de la lista de usuarios.
